@@ -86,7 +86,7 @@ Detail Screen:
 
 Displays the title and description of the selected fruit.
 
-Tap the "Select Image" button to capture an image using the device's camera (web implementation using file_picker).
+Tap the "Camera" button to capture an image using the device's camera (web implementation using file_picker).
 
 The captured image is displayed on the detail screen.
 
