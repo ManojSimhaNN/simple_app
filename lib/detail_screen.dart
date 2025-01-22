@@ -1,13 +1,14 @@
+// ignore_for_file: unused_field, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
-import 'dart:html' as html;
 import 'dart:typed_data';
 
 class DetailScreen extends StatefulWidget {
   final String title;
   final String description;
 
-  DetailScreen({required this.title, required this.description});
+  const DetailScreen({super.key, required this.title, required this.description});
 
   @override
   _DetailScreenState createState() => _DetailScreenState();
@@ -47,17 +48,17 @@ class _DetailScreenState extends State<DetailScreen> {
             children: [
               Text(
                 widget.title,
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Text(
                 widget.description,
-                style: TextStyle(fontSize: 16),
+                style: const TextStyle(fontSize: 16),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Center(
                 child: _imageBytes == null
-                    ? Text('No image selected.')
+                    ? const Text('No image selected.')
                     : Image.memory(
                         _imageBytes!,
                         width: 300,
@@ -65,10 +66,10 @@ class _DetailScreenState extends State<DetailScreen> {
                         fit: BoxFit.cover,
                       ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Center(
+              const Center(
                 child: Text(
                   'Select Image',
                   style: TextStyle(
@@ -76,14 +77,14 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Center(
                 child: FloatingActionButton(
                   hoverColor: Colors.lightBlue,
                   onPressed: _pickImage,
-                  child: Icon(
+                  child: const Icon(
                     Icons.camera_alt,
                   ),
                 ),

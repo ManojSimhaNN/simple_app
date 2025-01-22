@@ -43,7 +43,7 @@ class _welcomeState extends State<welcome> {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => HomeScreen()));
                   },
-                  child: Icon(Icons.arrow_forward)),
+                  child: const Icon(Icons.arrow_forward)),
             ],
           ),
         ));

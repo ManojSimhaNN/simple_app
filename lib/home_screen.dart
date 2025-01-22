@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'detail_screen.dart';
 
@@ -30,16 +32,16 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
-        title: Text('Fruit Store'),
+        title: const Text('Fruit Store'),
         backgroundColor: Colors.lightBlue,
-        leading: Icon(Icons.shopping_cart),
+        leading: const Icon(Icons.shopping_cart),
       ),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
@@ -51,7 +53,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Flexible(
@@ -59,7 +61,7 @@ class HomeScreen extends StatelessWidget {
               itemCount: items.length,
               itemBuilder: (context, index) {
                 return Center(
-                  child: Container(
+                  child: SizedBox(
                     width: MediaQuery.of(context).size.width * 0.8,
                     child: ListTile(
                       title: Center(
@@ -82,7 +84,7 @@ class HomeScreen extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           )
         ],
